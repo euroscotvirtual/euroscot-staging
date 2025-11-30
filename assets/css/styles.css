@@ -889,6 +889,7 @@ background: linear-gradient(to bottom right, #26255F, #2f2e6b, #1f1e4a, #26255F)
   margin-top: 0;
 }
 
+
 /* === Right Column === */
 .eus-home-right-column {
   background-color: rgba(38,37,95,0.6);
@@ -1050,7 +1051,7 @@ background: linear-gradient(to bottom right, #26255F, #2f2e6b, #1f1e4a, #26255F)
     display: block;
     z-index: 1100;
   }
-
+}
 
 
 
@@ -1744,7 +1745,7 @@ background: linear-gradient(to bottom right, #26255F, #2f2e6b, #1f1e4a, #26255F)
 /* Entry Styling */
 .airport-entry {
   padding-left: 0.5rem;
-//  border-left: 3px solid #0078d4;
+  border-left: 3px solid #0078d4;
   font-size: 0.95rem;
 }
 
@@ -1902,5 +1903,43 @@ padding: 40px 20px;
   max-width: 100%;
   height: auto;
 }
+
+.page-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Content column: fixed width, no shrink */
+.section-wrapper {
+  flex: 0 0 1180px;   /* basis 1180px, no grow, no shrink */
+  width: 1180px;      /* explicit width */
+  min-height: 488px;  /* allow vertical growth */
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 40, 89, 0.06);
+  box-sizing: border-box;
+}
+
+/* Right column: fixed footprint */
+.eus-right-column {
+  width: 260px;          /* fixed width */
+  height: 70px;          /* fixed height */
+  flex: 0 0 260px;       /* lock width in flex layouts */
+  background-color: rgba(38,37,95,0.6);
+  color: #fff;
+  padding: 8px;          /* adjust padding to fit height */
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;         /* optional: center content */
+  align-items: center;
+  justify-content: center;
+}
+
 
 
