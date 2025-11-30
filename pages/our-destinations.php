@@ -4,46 +4,51 @@ error_reporting(E_ALL);
 ?>
 
 <div class="page-wrapper">
-  <section class="section-wrapper bases-section">
-    <section id="bases">
-      <h1>Our Bases & Destinations</h1>
-            <?php include(__DIR__ . '/../includes/submenu-about.php'); ?>
-          <div class="menu-image">
-      <img src="/assets/images/ourdestinations.jpg" alt="Our Bases">
-    </div>
-      <div class="table-wrapper">
-        <table class="bases-table">
-          <thead>
-            <tr>
-              <th colspan="4">Base Airports</th>
-            </tr>
-          </thead>
-          <tbody class="base-list">
-            <tr><td colspan="4">Loading bases...</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </section>
+  <!-- Left side: bases + destinations stacked -->
+  <div class="page-content-wrapper">
 
-  <section class="section-wrapper destinations-section">
-    <section id="destinations">
-      <h1>Destinations</h1>
-      <div class="table-wrapper">
-        <table class="destinations-table">
-          <thead>
-            <tr>
-              <th colspan="4">Destination Airports</th>
-            </tr>
-          </thead>
-          <tbody class="destination-list">
-            <tr><td colspan="4">Loading destinations...</td></tr>
-          </tbody>
-        </table>
-      </div>
+    <section class="section-wrapper bases-section">
+      <section id="bases">
+        <h1>Our Bases & Destinations</h1>
+        <?php include(__DIR__ . '/../includes/submenu-about.php'); ?>
+        <div class="menu-image">
+          <img src="/assets/images/ourdestinations.jpg" alt="Our Bases">
+        </div>
+        <div class="table-wrapper">
+          <table class="bases-table">
+            <thead>
+              <tr><th colspan="4">Base Airports</th></tr>
+            </thead>
+            <tbody class="base-list">
+              <tr><td colspan="4">Loading bases...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </section>
-  </section>
+
+    <section class="section-wrapper destinations-section">
+      <section id="destinations">
+        <h1>Destinations</h1>
+        <div class="table-wrapper">
+          <table class="destinations-table">
+            <thead>
+              <tr><th colspan="4">Destination Airports</th></tr>
+            </thead>
+            <tbody class="destination-list">
+              <tr><td colspan="4">Loading destinations...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+  </div>
+
+  <!-- Right Column Include -->
+  <?php include(__DIR__ . '/../includes/right-column.php'); ?>
 </div>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
